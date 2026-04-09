@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { useAuth } from '../context/AuthContext';
-import { Settings, MapPin, Link as LinkIcon, Grid, Bookmark, User as UserIcon } from 'lucide-react';
+import { Settings, User as UserIcon } from 'lucide-react';
 import API from '../services/api';
 import EditProfileModal from '../components/profile/EditProfileModal';
 
@@ -83,7 +83,7 @@ export default function Profile() {
             />
             <div className="absolute -bottom-2 -right-2 bg-dark-900 p-1.5 rounded-full">
                <div className="bg-primary text-dark-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase">
-                 {user?.role || 'User'}
+                 {profileData.role || 'User'}
                </div>
             </div>
           </div>

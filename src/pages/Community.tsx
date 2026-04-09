@@ -57,12 +57,6 @@ export default function Community() {
   const [newPostImage, setNewPostImage] = useState<File | null>(null);
   const [commentText, setCommentText] = useState<{ [key: string]: string }>({});
 
-  useEffect(() => {
-    if (activeTab === 'feed') {
-      fetchPosts();
-    }
-  }, [activeTab, page, fetchPosts]);
-
   const fetchPosts = useCallback(async () => {
     setLoading(true);
     setError('');
@@ -77,6 +71,12 @@ export default function Community() {
       setLoading(false);
     }
   }, [page]);
+
+  useEffect(() => {
+    if (activeTab === 'feed') {
+      fetchPosts();
+    }
+  }, [activeTab, page, fetchPosts]);
 
   const handleCreatePost = async (e: React.FormEvent) => {
     e.preventDefault();

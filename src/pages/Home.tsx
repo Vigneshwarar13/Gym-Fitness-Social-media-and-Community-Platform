@@ -1,7 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { Flame, Droplets, Trophy, TrendingUp, Heart } from 'lucide-react';
+import { Flame, Droplets, Trophy, TrendingUp } from 'lucide-react';
 
 export default function Home() {
   return (

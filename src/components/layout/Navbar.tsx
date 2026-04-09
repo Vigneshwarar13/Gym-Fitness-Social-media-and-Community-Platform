@@ -41,7 +41,7 @@ export function Navbar({ onMenuClick }: NavbarProps) {
         </button>
         
         <Link to="/profile" className="h-8 w-8 rounded-full bg-gray-700 overflow-hidden">
-           <img src={user?.avatar || "https://github.com/shadcn.png"} alt="Profile" className="h-full w-full object-cover" />
+           <img src={user?.avatar || user?.profilePic || "https://github.com/shadcn.png"} alt="Profile" className="h-full w-full object-cover" />
         </Link>
       </div>
     </header>

@@ -45,7 +45,7 @@ export default function Settings() {
             
             <div className="flex items-center space-x-4">
                <img 
-                  src={user?.avatar || "https://github.com/shadcn.png"} 
+                  src={user?.avatar || user?.profilePic || "https://github.com/shadcn.png"} 
                   alt="Profile" 
                   className="w-20 h-20 rounded-full object-cover"
                />
